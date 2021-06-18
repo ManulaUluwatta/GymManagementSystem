@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.gym.ui.controller.StaticsFrameController">
+   <children>
+      <JFXTextField fx:id="date_txt" labelFloat="true" layoutX="14.0" layoutY="100.0" prefHeight="37.0" prefWidth="184.0" promptText="Date">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="weight_txt" labelFloat="true" layoutX="14.0" layoutY="165.0" onAction="#weightTextAction" prefHeight="37.0" prefWidth="184.0" promptText="Weight(Kg)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="memberID_txt" labelFloat="true" layoutX="14.0" layoutY="26.0" onAction="#memberTextAction" prefHeight="37.0" prefWidth="184.0" promptText="Member ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="select_btn" layoutX="235.0" layoutY="27.0" onAction="#selectButtonAction" prefHeight="35.0" prefWidth="100.0" stylesheets="@../style/BasicButton.css" text="Select" />
+      <JFXButton fx:id="add_btn" layoutX="235.0" layoutY="72.0" onAction="#addButtonAction" prefHeight="35.0" prefWidth="100.0" stylesheets="@../style/BasicButton.css" text="Add" />
+      <JFXButton fx:id="update_btn" layoutX="235.0" layoutY="115.0" onAction="#updateButtonAction" prefHeight="35.0" prefWidth="100.0" stylesheets="@../style/BasicButton.css" text="Update" />
+      <TableView fx:id="weight_tbl" layoutX="14.0" layoutY="344.0" onMouseClicked="#weightTableAction" prefHeight="252.0" prefWidth="255.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="344.0">
+         <columns>
+            <TableColumn fx:id="date_clm" prefWidth="137.0" text="Date" />
+            <TableColumn fx:id="weight_clm" minWidth="7.999969482421875" prefWidth="118.0" text="Weight" />
+            <TableColumn fx:id="weightID_clm" prefWidth="66.0" text="Column X" visible="false" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="memberIDOne_txt" labelFloat="true" layoutX="14.0" layoutY="291.0" onAction="#memberIDTextAction" prefHeight="37.0" prefWidth="184.0" promptText="Member ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="imageView" fitHeight="133.0" fitWidth="114.0" layoutX="228.0" layoutY="202.0" pickOnBounds="true" AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="202.0">
+         <image>
+            <Image url="@../images/notAvalable.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="delete_btn" layoutX="236.0" layoutY="160.0" onAction="#deleteButtonAction" prefHeight="35.0" prefWidth="100.0" text="Delete">
+         <stylesheets>
+            <URL value="@../style/BasicButton.css" />
+            <URL value="@../style/DeleteButton.css" />
+         </stylesheets>
+      </JFXButton>
+      <LineChart fx:id="weightChart" layoutX="368.0" layoutY="14.0" prefHeight="594.0" prefWidth="848.0" title="Weight" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="368.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+         <xAxis>
+            <CategoryAxis animated="false" endMargin="2.0" label="Dates" prefHeight="73.0" prefWidth="966.0" startMargin="2.0" tickLabelGap="1.0" tickLabelRotation="-44.0" tickLength="1.0" fx:id="xAxis" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxis" autoRanging="false" label="Weight(Kg)" side="LEFT" tickLength="15.0" upperBound="200.0" />
+         </yAxis>
+      </LineChart>
+      <JFXTextField fx:id="weightID_txt" disable="true" layoutX="14.0" layoutY="229.0" opacity="0.0" />
+   </children>
+</AnchorPane>

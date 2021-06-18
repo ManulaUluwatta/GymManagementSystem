@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.gym.ui.controller.MainFrameController">
+   <bottom>
+      <AnchorPane prefHeight="54.0" prefWidth="1350.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="49.0" prefWidth="1350.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <AnchorPane prefHeight="747.0" prefWidth="121.0" style="-fx-background-color: #B0BEC5;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="registration_btn" contentDisplay="TOP" layoutX="7.0" layoutY="51.0" onAction="#buttonAction" prefHeight="88.0" prefWidth="108.0" text="Registration">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../images/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="viewMember_btn" contentDisplay="TOP" layoutX="7.0" layoutY="155.0" onAction="#viewMemberButtonAction" prefHeight="88.0" prefWidth="108.0" text="View">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../images/file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="statics_btn" contentDisplay="TOP" layoutX="7.0" layoutY="259.0" onAction="#staticButtonAction" prefHeight="88.0" prefWidth="108.0" text="Statics">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../images/bar-chart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="viewPackage_btn" contentDisplay="TOP" layoutX="7.0" layoutY="367.0" onAction="#viewPackageButtonAction" prefHeight="88.0" prefWidth="108.0" text="Package">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../images/financial.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="payment_btn" contentDisplay="TOP" layoutX="7.0" layoutY="474.0" onAction="#paymentButtonAction" prefHeight="88.0" prefWidth="108.0" text="Payment">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../images/hand.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="anchorView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

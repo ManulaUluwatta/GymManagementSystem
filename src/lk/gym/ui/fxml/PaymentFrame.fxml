@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.gym.ui.controller.PaymentFrameController">
+   <children>
+      <JFXTextField fx:id="memberID_text" labelFloat="true" layoutX="90.0" layoutY="80.0" onAction="#memberIDTextAction" prefHeight="31.0" prefWidth="235.0" promptText="Member ID" />
+      <JFXTextField fx:id="packageFee_txt" disable="true" labelFloat="true" layoutX="495.0" layoutY="80.0" opacity="0.83" prefHeight="31.0" prefWidth="301.0" promptText="Package Fee" />
+      <JFXTextField fx:id="packageType_txt" disable="true" labelFloat="true" layoutX="90.0" layoutY="184.0" opacity="0.83" prefHeight="31.0" prefWidth="301.0" promptText="Package Type" />
+      <JFXTextField fx:id="paymentDate_txt" disable="true" labelFloat="true" layoutX="495.0" layoutY="184.0" opacity="0.83" prefHeight="31.0" prefWidth="301.0" promptText="Payment Date" />
+      <JFXTextField fx:id="expireDate_txt" disable="true" focusColor="RED" labelFloat="true" layoutX="861.0" layoutY="184.0" opacity="0.83" prefHeight="31.0" prefWidth="301.0" promptText="Expire Date" unFocusColor="RED" />
+      <JFXButton fx:id="makePayment_btn" layoutX="861.0" layoutY="273.0" onAction="#makePaymentButtonAction" prefHeight="45.0" prefWidth="327.0" stylesheets="@../style/BasicButton.css" text="Make Payment" />
+      <JFXButton fx:id="select_btn" layoutX="341.0" layoutY="78.0" onAction="#selectButtonAction" prefHeight="35.0" prefWidth="100.0" stylesheets="@../style/BasicButton.css" text="Select" />
+   </children>
+</AnchorPane>

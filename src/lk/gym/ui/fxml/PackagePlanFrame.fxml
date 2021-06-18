@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.gym.ui.controller.PackagePlanFrameController">
+   <children>
+      <JFXTextField fx:id="packageID_txt" disable="true" labelFloat="true" layoutX="160.0" layoutY="54.0" prefHeight="31.0" prefWidth="242.0" promptText="Package  ID" />
+      <JFXTextField fx:id="packageType_txt" labelFloat="true" layoutX="156.0" layoutY="137.0" onAction="#packageTypeTextAction" prefHeight="31.0" prefWidth="242.0" promptText="Package  Type" />
+      <JFXTextField fx:id="packageFee_txt" labelFloat="true" layoutX="484.0" layoutY="55.0" onAction="#packageFeeTxtAction" prefHeight="31.0" prefWidth="242.0" promptText="Package Fee" />
+      <JFXButton fx:id="delete_btn" layoutX="862.0" layoutY="141.0" onAction="#deleteButtonAction" prefHeight="35.0" prefWidth="182.0" text="Delete">
+         <stylesheets>
+            <URL value="@../style/BasicButton.css" />
+            <URL value="@../style/DeleteButton.css" />
+         </stylesheets>
+      </JFXButton>
+      <JFXButton fx:id="add_btn" layoutX="862.0" layoutY="42.0" onAction="#addButtonAction" prefHeight="35.0" prefWidth="182.0" stylesheets="@../style/BasicButton.css" text="Add" />
+      <JFXButton fx:id="update_btn" layoutX="862.0" layoutY="89.0" onAction="#updateButtonAction" prefHeight="35.0" prefWidth="182.0" stylesheets="@../style/BasicButton.css" text="Update" />
+      <TableView fx:id="packageTable" layoutX="301.0" layoutY="238.0" onMouseClicked="#packageTableAction" prefHeight="356.0" prefWidth="567.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="301.0" AnchorPane.topAnchor="238.0">
+        <columns>
+          <TableColumn fx:id="packageID_clm" prefWidth="123.0" text="Package ID" />
+          <TableColumn fx:id="packageType_clm" prefWidth="187.0" text="Package Type" />
+            <TableColumn fx:id="packageFee_clm" prefWidth="182.0" text="Package Fee" />
+            <TableColumn fx:id="month_clm" prefWidth="75.0" text="Months" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="month_txt" labelFloat="true" layoutX="484.0" layoutY="138.0" onAction="#monthTextAction" prefHeight="31.0" prefWidth="131.0" promptText="Months Allocation" />
+      <Separator layoutX="38.0" layoutY="205.0" prefHeight="0.0" prefWidth="1142.0" />
+   </children>
+</AnchorPane>

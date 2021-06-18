@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.gym.ui.controller.MemberViewFrameController">
+   <children>
+      <TableView fx:id="members_tbl" layoutX="12.0" layoutY="226.0" onMouseClicked="#memberTableAction" prefHeight="512.0" prefWidth="1203.0" style="-fx-text-alignment: CENTER;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="226.0">
+         <columns>
+            <TableColumn fx:id="memberID_clm" prefWidth="82.0" text="ID" />
+            <TableColumn fx:id="firstName_clm" prefWidth="92.0" text="First Name" />
+            <TableColumn fx:id="lastName_clm" prefWidth="104.0" text="Last Name" />
+            <TableColumn fx:id="nic_clm" prefWidth="121.0" text="NIC" />
+            <TableColumn fx:id="age_clm" prefWidth="61.0" text="Age" />
+            <TableColumn fx:id="contact_clm" minWidth="6.0" prefWidth="121.0" text="Contact" />
+            <TableColumn fx:id="address_clm" prefWidth="158.0" text="Address" />
+            <TableColumn fx:id="weight_clm" prefWidth="87.0" text="Weight" />
+            <TableColumn fx:id="inDate_clm" prefWidth="119.0" text="In Date" />
+            <TableColumn fx:id="package_clm" prefWidth="144.0" text="Package Type" />
+            <TableColumn fx:id="exDate_clm" prefWidth="110.0" text="Expire Date" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="searchByName_txt" alignment="BOTTOM_LEFT" labelFloat="true" layoutX="14.0" layoutY="153.0" onAction="#searchByNameAction" prefHeight="45.0" prefWidth="273.0" promptText="Search by Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="imageView" layoutX="1129.0" layoutY="13.0" pickOnBounds="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="13.0">
+         <image>
+            <Image url="@../images/notAvalable.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="searchByID_txt" alignment="BOTTOM_LEFT" labelFloat="true" layoutX="14.0" layoutY="76.0" onAction="#SearchByIDAction" prefHeight="45.0" prefWidth="273.0" promptText="Search By ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

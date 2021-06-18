@@ -1,0 +1,19 @@
+.button{
+    -fx-border-radius: 1em;
+    -fx-background-radius: 1em;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+}
+.text-field{
+    -fx-text-fill: white;
+
+}
+#login_btn{
+    -fx-border-radius: 1em;
+    -fx-background-radius: 1em;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
